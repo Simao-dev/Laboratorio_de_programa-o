@@ -20,3 +20,23 @@ int main() {
  * Autor: [Pedro simão]
  * Data: [12/05/2026]
  */
+
+ //calcula digito
+#include <stdio.h>
+
+int calcula(int n){
+    int cont = 0;
+    
+    while(n > 0){
+        n = n / 10;
+        cont ++;
+    }
+    return cont;
+}
+
+int main() {
+    // Write C code here
+    printf("%d",calcula(10));
+
+    return 0;
+}
