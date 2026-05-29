@@ -190,3 +190,72 @@ int main() {
  * Autor: [Pedro simão]
  * Data: [28/05/2026]
  */
+
+ // Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int vetor[10] = {1,2,3,4,6,7,8,9,10};
+    int v1[10];
+    int v2[10];
+    int cont_imp = 0;
+    int cont_par = 0;
+    
+    for(int i = 0; i < 10; i++){
+        if(vetor[i] % 2 == 0){
+            v2[cont_par] = vetor[i];
+            cont_par++;
+        }else {
+            v1[cont_imp] = vetor[i];
+            cont_imp++;
+        }
+    }
+    for(int i = 0; i < 10; i++){
+        printf("%d",v1[i]);
+        printf("%d",v2[i]);
+    }
+
+    return 0;
+}
+
+/* Programa para separar elementos pares e ímpares de um array de inteiros.
+ * 
+ * O programa declara um array de inteiros chamado 'vetor' com 10 elementos pré-inicializados. 
+ * Ele também declara dois arrays adicionais, 'v1' para armazenar os elementos ímpares e 'v2' para armazenar os elementos pares, juntamente com contadores para cada tipo de elemento. 
+ * O programa utiliza um loop para iterar sobre os elementos do array original, verificando se cada elemento é par ou ímpar. 
+ * Os elementos pares são armazenados em 'v2' e os ímpares em 'v1', com os contadores sendo incrementados conforme necessário. 
+ * No final, o programa imprime os elementos dos arrays 'v1' e 'v2'.
+ * 
+ * Autor: [Pedro simão]
+ * Data: [28/05/2026]
+ */
+
+ #include <stdio.h>
+
+int main() {
+    int v1[5] = {4,8,6,2,1};
+    int v2[5] = {2,6,3,1,7};
+    int valor1;
+    int valor2;
+    
+    for (int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+           if(v1[i] == v2[j]){
+               printf("%d",v1[i]);
+           } 
+        }
+
+    }
+    return 0;
+}
+
+/* Programa para encontrar elementos comuns entre dois arrays de inteiros.
+ * 
+ * O programa declara dois arrays de inteiros, 'v1' e 'v2', cada um com 5 elementos pré-inicializados. 
+ * Ele utiliza um loop aninhado para comparar cada elemento do primeiro array ('v1') com cada elemento do segundo array ('v2'). 
+ * Se um elemento de 'v1' for encontrado em 'v2', ele é impresso na tela. 
+ * O programa, portanto, identifica e exibe os elementos que são comuns a ambos os arrays.
+ * 
+ * Autor: [Pedro simão]
+ * Data: [28/05/2026]
+ */
