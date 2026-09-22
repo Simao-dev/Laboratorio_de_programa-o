@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição - Experiência Profissional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        S.I sistemas
+    </header>
+
+    <div class="card-form">
+        <div class="etapas">
+            <div class="etapa-item concluida">
+                <div class="circulo">✓</div>
+                <span>Dados Pessoais</span>
+            </div>
+            <div class="linha-etapa concluida"></div>
+            <div class="etapa-item concluida">
+                <div class="circulo">✓</div>
+                <span>Educação</span>
+            </div>
+            <div class="linha-etapa concluida"></div>
+            <div class="etapa-item ativa">
+                <div class="circulo">3</div>
+                <span>Experiência</span>
+            </div>
+        </div>
+
+        <h2 class="form-titulo">Experiência Profissional</h2>
+        <p class="form-subtitulo">Informe sua experiência mais recente na área.</p>
+
+        <form action="feedback.html" method="GET">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Empresa anterior <span>*</span></label>
+                    <input type="text" placeholder="Ex: TOTVS S/A" required>
+                </div>
+                <div class="form-group">
+                    <label>Cargo ocupado anteriormente <span>*</span></label>
+                    <input type="text" placeholder="Ex: Desenvolvedor(a) Pleno" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tempo de experiência na área <span>*</span></label>
+                <select required>
+                    <option value="">Selecione...</option>
+                    <option value="Sem experiência">Sem experiência</option>
+                    <option value="Menos de 1 ano">Menos de 1 ano</option>
+                    <option value="1 a 3 anos">1 a 3 anos</option>
+                    <option value="3 a 5 anos">3 a 5 anos</option>
+                    <option value="Mais de 5 anos">Mais de 5 anos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Principais responsabilidades <span>*</span></label>
+                <textarea placeholder="Descreva brevemente suas principais atividades e conquistas nesse cargo..." required></textarea>
+            </div>
+
+            <div class="form-botoes">
+                <a href="index.html" class="btn-voltar">&larr; Voltar ao início</a>
+                <button type="submit" class="btn-enviar">Enviar inscrição &rarr;</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição - Dados Pessoais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        S.I sistemas
+    </header>
+
+    <div class="card-form">
+        <div class="etapas">
+            <div class="etapa-item ativa">
+                <div class="circulo">1</div>
+                <span>Dados Pessoais</span>
+            </div>
+            <div class="linha-etapa"></div>
+            <div class="etapa-item">
+                <div class="circulo">2</div>
+                <span>Educação</span>
+            </div>
+            <div class="linha-etapa"></div>
+            <div class="etapa-item">
+                <div class="circulo">3</div>
+                <span>Experiência</span>
+            </div>
+        </div>
+
+        <h2 class="form-titulo">Dados Pessoais</h2>
+        <p class="form-subtitulo">Preencha suas informações básicas para continuar.</p>
+
+        <form action="etapa2.html" method="GET">
+            <div class="form-group">
+                <label>Nome completo <span>*</span></label>
+                <input type="text" placeholder="Ex: Maria Oliveira Santos" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>E-mail <span>*</span></label>
+                    <input type="email" placeholder="maria@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefone <span>*</span></label>
+                    <input type="text" placeholder="(88) 99999-9999" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Data de nascimento <span>*</span></label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>CPF <span>*</span></label>
+                    <input type="text" placeholder="000.000.000-00" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Cargo pretendido <span>*</span></label>
+                    <input type="text" placeholder="Ex: Engenheiro(a) de Software Sênior" required>
+                </div>
+                <div class="form-group">
+                    <label>Pretensão salarial (R$) <span>*</span></label>
+                    <input type="number" placeholder="15000" required>
+                </div>
+            </div>
+
+            <div class="form-botoes" style="justify-content: flex-end;">
+                <button type="submit" class="btn-proximo">Próxima etapa</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
