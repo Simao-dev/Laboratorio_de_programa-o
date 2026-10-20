@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja da Turma</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .topo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+
+            background: #2c3e50;
+            color: white;
+            padding: 16px;
+        }
+
+        .destaque {
+            background: #ecf0f1;
+            padding: 32px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 8px;
+            width: 300px;
+        }
+
+        .tag {
+            background: #e67e22;
+            color: white;
+            padding: 2px 8px;
+            height: 25px;
+        }
+
+        .rodape {
+            background: #2c3e50;
+            color: white;
+            padding: 2px;
+        }
+
+        .rodape p {
+            text-align: center;
+        }
+
+        .produtos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .card>.titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .destaque {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            margin:0 15px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header class="topo">
+        <span class="logo">Loja da Turma</span>
+        <nav class="menu">
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <h1>Promoção da semana</h1>
+            <p>Até 50% de desconto em itens selecionados.</p>
+            <button>Ver ofertas</button>
+        </section>
+
+        <section class="produtos">
+            <article class="card">
+                <div class="titulo">
+                    <h2>Camiseta</h2>
+                    <span class="tag">Novo</span>
+                </div>
+                <p>Algodão 100%.</p>
+                <strong>R$ 49,90</strong>
+            </article>
+
+            <article class="card">
+                <div class="titulo">
+                    <h2>Caneca</h2>
+                </div>
+                <p>Cerâmica, 300 ml.</p>
+                <strong>R$ 29,90</strong>
+            </article>
+
+            <a href="">
+                <article class="card">
+                    <div class="titulo">
+                        <h2>Mochila</h2>
+                        <span class="tag">-20%</span>
+                    </div>
+                    <p>Resistente à água.</p>
+                    <strong>R$ 129,90</strong>
+                </article>
+            </a>
+
+            <article class="card">
+                <div class="titulo">
+                    <h2>Moto</h2>
+                    <span class="tag">-20%</span>
+                </div>
+                <p>Resistente à água.</p>
+                <strong>R$ 129,90</strong>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>© 2026 Loja da Turma</p>
+    </footer>
+</body>
+
+</html>
