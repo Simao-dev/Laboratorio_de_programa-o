@@ -103,7 +103,7 @@ a, button{
 
 .div-services{
     font-size: 18px;
-    width: 50%;
+    width: 70%;
     height: 46px;
 }
 
@@ -201,3 +201,105 @@ a, button{
     gap: 10px;
 }
 
+.section-make{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--cor-gray);
+    border-radius: 45px;
+    align-items: center;
+}
+
+.section-make h2{
+    font-size: 30px;
+}
+
+.section-card-black{
+    display: flex;
+    background-color: var(--cor-text-principal);
+    color: var(--cor-principal);
+    border-radius: 45px;
+    height: 400px;
+    width: 100%;
+   
+
+}
+
+.div--card-black{
+    display: flex;
+    margin: 70px;
+    gap: 50px;
+    align-items: center;
+}
+.button-link a{
+    color: var(--cor-green);
+    text-align: center;
+    margin: 5px;
+}
+
+.linha-meio {
+
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;          
+  background-color: var(--cor-gray);
+}
+
+.section-Consultation{
+    background-color: var(--cor-green);
+    padding: 70px;
+    border-radius: 45px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+}
+
+.div-Consultation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.div-Consultation h2 {
+    font-size: 35px;
+}
+.div-Consultation button{
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: var(--cor-green);
+}
+
+.section-branco{
+    margin-top: 50px;
+    background-color: var(--cor-gray);
+    padding: 0 70px;
+    border-radius: 45px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+
+}
+
+.div-Consultation-branco{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div-Consultation-filho{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.div-Consultation-filho h2{
+    font-size: 60px;
+}
+
+.div-Consultation-filho{
+    font-size: 30px;
+}
+
+.div-Consultation-branco button{
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: var(--cor-gray);
+}
