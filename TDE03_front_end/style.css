@@ -12,14 +12,21 @@ body{
     margin: 0 auto;
     box-sizing: border-box;
     font-family: var(--font--principal);
-    padding: 50px 100px;
+   
 }
 
 .nav-menu{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-principal);
+    z-index: 1000;
+    padding: 15px 100px;
+}
+
+.main-geral{
+    padding: 0 100px;
 }
 
 a, button{
@@ -42,13 +49,30 @@ a, button{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button-transparente:hover{
+    background-color: var(--cor-green);
+    transform: scale(1.05);
+
 }
 
 .menus{
     display: flex;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 80px;
+    gap: 10px;    
+}
+.menus a{
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    padding: 5px;
+    width: 110px;
+    height: 30px;
+}
+.menus a:hover{
+    background-color: var(--cor-green);
+    transform: scale(1.05);
 }
 
 .section-main{
@@ -80,7 +104,13 @@ a, button{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
    
+}
+.button-preto:hover{
+    background-color: var(--cor-green);
+    transform: scale(1.05);
+    border: 1px solid black;
 }
 
 .carrosel-imagens{
@@ -121,26 +151,37 @@ a, button{
 }
 
 .card-servicos{
+    height: 310px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     border: 1px solid black;
-    gap: 30px;
     border-radius: 45px;
     padding: 40px;
     background-color: var(--cor-gray);
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+
+.card-servicos:hover{
+    transform: scale(1.05);
 }
 
 .card-servicos-green{
     display: flex;
     flex-direction: row;
     border: 1px solid black;
-    gap: 30px;
+    height: 310px;
+    width: 600px;
     border-radius: 45px;
     padding: 40px;
     background-color: var(--cor-green);
-     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.card-servicos-green:hover{
+    transform: scale(1.05);
 }
 
 .grid-green h3 span{
@@ -156,15 +197,20 @@ a, button{
 }
 
 .card-servicos-black{
-
+    height: 310px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     border: 1px solid black;
-    gap: 30px;
     border-radius: 45px;
     padding: 40px;
     background-color: var(--cor-drak);
-     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-servicos-black:hover{
+    transform: scale(1.05);
 }
 
 .grid-black h3 span{
@@ -251,6 +297,11 @@ a, button{
     padding: 70px;
     border-radius: 45px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.section-Consultation:hover{
+    transform: scale(1.05);
 }
 
 .div-Consultation{
@@ -275,7 +326,12 @@ a, button{
     padding: 0 70px;
     border-radius: 45px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.87);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
+}
+
+.section-branco:hover{
+    transform: scale(1.05);
 }
 
 .div-Consultation-branco{
