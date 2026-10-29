@@ -29,7 +29,7 @@ body{
     padding: 0 100px;
 }
 
-a, button{
+.menus a, button{
     text-decoration: none;
     cursor: pointer;
     color: var(--cor-text-principal);
@@ -550,4 +550,268 @@ a, button{
   background-color: var(--lime-green);
   opacity: 1;
   transform: scale(1.2);
+}
+
+.form_main{
+    position: relative;
+    background-color: #f3f3f3;
+    border-radius: 45px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; 
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.formulario{
+    width: 50%;
+    min-width: 550px;
+    z-index: 2;
+}
+.input_radio{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 30px;
+}
+.say{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--cor-text-principal);
+    user-select: none;
+}
+.say input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-mark{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--cor-text-principal);
+    border-radius: 50%;
+    background-color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease;
+}
+
+.radio-mark::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--cor-green);
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.say input[type="radio"]:checked + .radio-mark::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.input_text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.input_text label{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.formulario .inputs_text{
+    width: 556px;
+    height: 56px;
+    border-radius: 14px;
+    border: 1px solid var(--cor-text-principal);
+    font-family: var(--font--principal);
+    margin: 10px 0;
+    padding: 5px 20px; 
+    font-size: 18px;
+    
+}
+
+textarea.input_messege{
+  width: 600px;
+  height: 150px;
+  padding: 18px 20px; 
+  border: 1px solid var(--cor-text-principal);
+  border-radius: 14px;
+  font-family: var(--font--principal);
+  font-size: 18px;
+  resize: none; 
+  box-sizing: border-box;
+}
+.imagem_estrelas{
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.imagem_estrelas img{
+    height: 100%;
+    max-height: 650px;
+    width: auto;
+    display: block;
+}
+.button-preto-1{
+    font-family: var(--font-principal);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--cor-principal);
+    background-color: var(--cor-drak);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    padding: 20px 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-preto-1:hover{
+    background-color: var(--cor-green);
+    transform: scale(1.05);
+    border: 1px solid var(--cor-text-principal);
+}
+footer {
+    padding: 60px 60px;
+    margin-top: 150px;
+    background-color: var(--cor-text-principal);
+    width: 100%;
+    min-height: 540px; 
+    border-radius: 45px 45px 0 0; 
+    box-sizing: border-box;
+}
+
+.nav-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-menu-footer a {
+    color: var(--cor-principal);
+}
+
+.class-redes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menus-footer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+
+.contact-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.contact {
+    max-width: 330px;
+}
+
+.contact p {
+    padding: 8px 0;
+    color: var(--cor-principal);
+    font-weight: 100;
+}
+
+.contact-us {
+    padding: 4px 8px;
+    border-radius: 7px;
+    font-size: 20px;
+    display: inline-block;
+    background-color: var(--cor-green);
+    color: #000000;
+}
+
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 14px;
+    padding: 40px;
+    background-color: #292A32;
+    max-width: 634px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-footer label {
+    flex: 1;
+}
+
+.form-footer input {
+    background-color: transparent;
+    padding: 0 15px;
+    width: 100%;     
+    height: 65px;
+    border-radius: 14px;
+    border: 1px solid var(--cor-principal);
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.form-footer button {
+    background-color: var(--cor-green);
+    color: #000000;
+    border: none;
+    border-radius: 14px;
+    height: 65px;
+    padding: 0 35px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.linha-branca{
+    right: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-principal);
+}
+.texto-footer{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: var(--cor-principal)
+}
+
+.texto-footer a{
+    color: var(--cor-principal);
 }
