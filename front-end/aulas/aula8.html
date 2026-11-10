@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aprovado{
+            color: green;
+        }
+        .avf{
+            color: yellow;
+        }
+        .reprovado{
+            color: red;
+        }
+       
+    </style>
+</head>
+<body>
+    <input id="avp1" type="text" placeholder="Digite sua nota">
+    <input id="avp2" type="text" placeholder="Digite sua nota">
+    <button id="btn" onclick="calcularMedia()">Calcular</button> 
+    <span id="aviso"> </span>
+    <span id="resultado"> </span>
+</body>
+    <script>
+
+        function calcularMedia(){
+            const avp1 = parseFloat(document.getElementById("avp1").value);
+            const avp2 = parseFloat(document.getElementById("avp2").value);
+            const media = (avp1 + avp2) / 2;
+
+            document.getElementById("resultado").textContent = "Resultado:" + media;
+            
+            if(avp1 < 0 || avp1 > 10 || avp2 < 0 || avp2 > 10){
+                document.getElementById("aviso").textContent = "Digite uma nota válida";
+                return;
+            }
+
+            if( media >= 7){
+                document.getElementById("aviso").classList.remove("avf", "reprovado");
+                document.getElementById("aviso").classList.add("aprovado");
+            } else if (media >= 4) {
+                document.getElementById("aviso").classList.remove("aprovado");
+                document.getElementById("aviso").textContent = "Situação: AVF";
+                document.getElementById("aviso").classList.add("avf");
+            } else {
+                document.getElementById("aviso").classList.remove("aprovado", "avf");
+                document.getElementById("aviso").textContent = "Situação: Reprovado";
+                document.getElementById("aviso").classList.add("reprovado");
+            }
+        }
+
+
+    </script>
+</html>
