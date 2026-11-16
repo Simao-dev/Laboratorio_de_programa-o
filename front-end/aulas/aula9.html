@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .saida {
+            background-color: #ccc;
+            height: 15%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 4rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            flex: 1;
+        }
+
+        button {
+            font-size: 3rem;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="saida"><span id="saida"></span></div>
+    <div class="container">
+
+        <button>%</button>
+        <button onclick="entradaOperacao(4)">/</button>
+        <button onclick="limpar()">C</button>
+        <button>x</button>
+
+        <button onclick="entradaValor(7)">7</button>
+        <button onclick="entradaValor(8)">8</button>
+        <button onclick="entradaValor(9)">9</button>
+        <button onclick="entradaOperacao(3)">*</button>
+
+        <button onclick="entradaValor(4)">4</button>
+        <button onclick="entradaValor(5)">5</button>
+        <button onclick="entradaValor(6)">6</button>
+        <button onclick="entradaOperacao(2)">-</button>
+
+        <button onclick="entradaValor(1)">1</button>
+        <button onclick="entradaValor(2)">2</button>
+        <button onclick="entradaValor(3)">3</button>
+        <button onclick="entradaOperacao(1)">+</button>
+
+        <button>.</button>
+        <button onclick="entradaValor(0)">0</button>
+        <button>,</button>
+        <button onclick="resultado()">=</button>
+
+    </div>
+</body>
+<script>
+    const saida = document.getElementById("saida");
+    saida.innerText = Number(0);
+
+    let n1 = null;
+    let n2 = null;
+    let operacao = null;
+    let flag = false;
+
+    function entradaValor(valor) {
+
+        if (flag) {
+            saida.innerText = '';
+            flag = false;
+        }
+
+        saida.innerText = Number(saida.innerText + valor);
+
+        if (operacao == null) {
+            n1 = parseFloat(saida.innerText);
+        } else {
+            n2 = parseFloat(saida.innerText);
+        }
+
+        debug();
+    }
+
+    function entradaOperacao(valorOperecao) {
+        operacao = valorOperecao
+
+        if (n1 != null && n2 != null)
+            resultado();
+        else
+            flag = true;
+
+        debug();
+    }
+
+
+    function resultado() {
+
+        if (n1 == null || n2 == null || operacao == null)
+            return;
+
+        let total = null;
+
+        if (operacao == 1) {
+            total = n1 + n2;
+        } else if (operacao == 2) {
+            total = n1 - n2;
+        } else if (operacao == 3) {
+            total = n1 * n2;
+        } else if (operacao == 4) {
+            total = n1 / n2;
+        }
+
+        saida.innerText = total;
+
+        n1 = Number(total);
+        n2 = null;
+        operacao = null;
+        debug();
+    }
+
+    function limpar() {
+        saida.innerText = Number(0);
+        n1 = null;
+        n2 = null;
+        operacao = null;
+    }
+
+    function debug() {
+        console.log("N1: " + n1);
+        console.log("N2: " + n2);
+        console.log("OP: " + operacao);
+        console.log("FLAG: " + flag);
+    }
+
+</script>
+
+</html>
